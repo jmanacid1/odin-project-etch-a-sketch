@@ -13,10 +13,17 @@ function createGrid(numDivs){
         div.style.width = `${divSize}%`
         div.style.height = `auto`
         div.innerHTML = `${i+1}`
+        div.id = i+1;
+        div.classList.add('pixel')
         container.appendChild(div)
             
         }
-    }
-    
-
+    }    
 createGrid(16)
+document.querySelectorAll('.pixel').forEach(item =>{
+    item.addEventListener('mouseover',function(e){
+        console.log(e.target);
+        e.target.style.backgroundColor = 'blue';
+    })
+});
+
