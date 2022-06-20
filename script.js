@@ -5,16 +5,18 @@
         //space / number of divs = space for each div
         //for number of divs, create div with dimensions above inside container
 const container = document.getElementById('container') 
-function createGrid(numDivs,gridSize){
-    const divSize = gridSize / numDivs
+function createGrid(numDivs){
+    const divSize = 100 / numDivs
     console.log(divSize)
-    for(let i=0; i<numDivs;i++){
+    for(let i=0; i<(numDivs * numDivs);i++){
         const div = document.createElement('div')
-        div.innerHTML = 'test'
+        div.style.width = `${divSize}%`
+        div.style.height = `auto`
+        div.innerHTML = `${i+1}`
         container.appendChild(div)
             
         }
     }
     
 
-createGrid(10,100)
+createGrid(16)

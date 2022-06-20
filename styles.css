@@ -1,4 +1,15 @@
 #container{
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+div{
+    border-style: dotted;
+    margin: 0%;
+    padding: 0%;
+    border: 0px;
+    background-color: saddlebrown;
+}
+body{
+    margin: 0px;
 }
