@@ -1,0 +1,10 @@
+make 16 divs using JS inside an html container div
+    make function that creates a new grid of divs
+        function(number of divs, space)
+            space / number of divs = space for each div
+            for number of divs, create div with dimensions above inside container
+
+Make sure the divs are in a grid, use flexbox for that
+
+set up a hover effect that leaves a trail of colored pixels where the mouse has been
+add a button that clears the grid and replaces it with n new divs where n is the number entered that take up the same space, limit 100
