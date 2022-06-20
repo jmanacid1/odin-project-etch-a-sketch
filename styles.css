@@ -2,6 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     height: 100vh;
+    
 }
 .pixel{
     border-style: dotted;
@@ -9,9 +10,6 @@
     padding: 0%;
     border: 0px;
     background-color: saddlebrown;
-}
-div:hover{
-    background-color: aqua;
 }
 body{
     margin: 0px;

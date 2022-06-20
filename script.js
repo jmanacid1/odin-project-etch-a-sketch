@@ -12,18 +12,29 @@ function createGrid(numDivs){
         const div = document.createElement('div')
         div.style.width = `${divSize}%`
         div.style.height = `auto`
-        div.innerHTML = `${i+1}`
         div.id = i+1;
         div.classList.add('pixel')
-        container.appendChild(div)
-            
+        container.appendChild(div)  
         }
-    }    
-createGrid(16)
-document.querySelectorAll('.pixel').forEach(item =>{
-    item.addEventListener('mouseover',function(e){
-        console.log(e.target);
-        e.target.style.backgroundColor = 'blue';
-    })
-});
-
+        document.querySelectorAll('.pixel').forEach(item =>{
+            item.addEventListener('mouseover',function(e){
+                e.target.style.backgroundColor = 'blue';
+            })
+        });
+    }  
+function removeGrid(){
+    document.querySelectorAll('.pixel').forEach(item => {
+        item.remove();
+    });
+}  
+createGrid(32)
+const resetButton = document.getElementById('reset-button');
+resetButton.addEventListener('click', function(e){
+    console.log(e);
+    let newGrid = prompt("How many pixels would you like?","16")
+    if (+newGrid > 100){
+        newGrid = 100;
+    }
+    removeGrid();
+    createGrid(+newGrid);
+})
